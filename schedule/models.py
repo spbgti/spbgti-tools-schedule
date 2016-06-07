@@ -1,7 +1,8 @@
-from django.utils import timezone
 from django.db import models
-from shared.fields import DayOfTheWeekField
-from shared.fields import PairField
+from django.utils import timezone
+
+from fields import DayOfTheWeekField
+from fields import PairField
 
 
 class Schedule(models.Model):
