@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Schedule
+from .models import ClassRecord
+
+admin.site.register(Schedule)
+admin.site.register(ClassRecord)

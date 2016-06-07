@@ -21,5 +21,6 @@ from django.conf.urls import include, url
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^schedule/', include('schedule.urls')),
+    url(r'^api/', include('api.urls')),
 
 ]
