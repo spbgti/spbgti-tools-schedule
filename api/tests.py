@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from core.models import Room, Location
+from spbgti_core.models import Room, Location
 
 
 class RoomTestCase(TestCase):

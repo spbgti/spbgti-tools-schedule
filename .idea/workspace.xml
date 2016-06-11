@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/tests.py" afterPath="$PROJECT_DIR$/api/tests.py" />
     </list>
     <list id="0a165f83-50ab-425d-b87a-d02c6b38b23e" name="ST-6 Fix issue with schedule models from admin" comment="Added CI configs" />
     <ignored path="spbgti-tools-schedule.iws" />
@@ -32,11 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -89,6 +99,7 @@
         <option value="$PROJECT_DIR$/spbgti_core/migrations/0002_auto_20160608_2358.py" />
         <option value="$PROJECT_DIR$/../spbgti-tools-core/.travis.yml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/api/tests.py" />
       </list>
     </option>
   </component>
@@ -199,11 +210,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../spbgti-tools-core" />
     <property name="start.from.branch" value="master" />
-  </component>
-  <component name="Push.Settings">
-    <excluded-roots>
-      <path value="$PROJECT_DIR$/../spbgti-tools-core" />
-    </excluded-roots>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -564,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465645158190</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CI integration setting. Added script part to run tests">
+      <created>1465645377316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1465645377316</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers>
       <YouTrack shared="false" url="http://spbgti.myjetbrains.com/youtrack">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -887,16 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spbgti-tools-core/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -909,6 +912,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
