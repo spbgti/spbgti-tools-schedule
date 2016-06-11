@@ -1,1 +1,1 @@
-web: gunicorn spbgti-tools-schedule.wsgi
+web: gunicorn ScheduleApp.wsgi
