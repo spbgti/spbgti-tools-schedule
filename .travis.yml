@@ -1,0 +1,15 @@
+language: python
+
+python:
+  - "3.5"
+
+install: "pip install -r requirements.txt"
+
+notifications:
+  slack: spbgti:DISw2DtYSQ3gQ8jB9NvTbSYG
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 4c01be97-e60c-4184-be25-b4c3aa2d2fd4
+  app: spbgti-tools-schedule
