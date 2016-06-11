@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/fields.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/migrations/0002_auto_20160608_2358.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spbgti_core/views.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/travis.yml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/__init__.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/admin.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/admin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/apps.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/apps.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/migrations/0001_initial.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/migrations/0002_auto_20160608_2358.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/migrations/0002_auto_20160608_2358.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/migrations/__init__.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/requirements.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/models.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/tests.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/core/views.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../spbgti-tools-core/fields.py" afterPath="$PROJECT_DIR$/../spbgti-tools-core/spbgti_core/fields.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../spbgti-tools-core/.idea/spbgti-tools-core.iml" afterPath="$PROJECT_DIR$/../spbgti-tools-core/.idea/spbgti-tools-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../spbgti-tools-core/.travis.yml" afterPath="$PROJECT_DIR$/../spbgti-tools-core/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ScheduleApp.iml" afterPath="$PROJECT_DIR$/.idea/ScheduleApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScheduleApp/settings.py" afterPath="$PROJECT_DIR$/ScheduleApp/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/migrations/0002_auto_20160608_2358.py" afterPath="$PROJECT_DIR$/api/migrations/0002_auto_20160608_2358.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/models.py" afterPath="$PROJECT_DIR$/api/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <list id="0a165f83-50ab-425d-b87a-d02c6b38b23e" name="ST-6 Fix issue with schedule models from admin" comment="Added CI configs" />
     <ignored path="spbgti-tools-schedule.iws" />
@@ -62,7 +31,18 @@
     <favorites_list name="spbgti-tools-schedule" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,13 +72,13 @@
         <option value="$PROJECT_DIR$/travis.yml" />
         <option value="$PROJECT_DIR$/../spbgti-tools-core/travis.yml" />
         <option value="$PROJECT_DIR$/../spbgti-tools-core/.travis.yml" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/spbgti_core/models.py" />
         <option value="$PROJECT_DIR$/api/migrations/0002_auto_20160608_2358.py" />
         <option value="$PROJECT_DIR$/api/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/spbgti_core/migrations/0002_auto_20160608_2358.py" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -548,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465642034178</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CI integration setting. Added requirements.txt">
+      <created>1465644778075</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1465644778075</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers>
       <YouTrack shared="false" url="http://spbgti.myjetbrains.com/youtrack">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -568,9 +555,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17935579" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17935579" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -607,7 +594,8 @@
     <MESSAGE value="Merge with view changes from my laptop" />
     <MESSAGE value="Added CI configs" />
     <MESSAGE value="CI integration setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI integration setting" />
+    <MESSAGE value="CI integration setting. Added requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI integration setting. Added requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -787,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spbgti-tools-core/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -878,6 +858,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spbgti_core/migrations/0002_auto_20160608_2358.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
