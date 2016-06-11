@@ -5,13 +5,13 @@ from __future__ import unicode_literals
 import django.db.models.deletion
 from django.db import migrations, models
 
-import fields
+from spbgti_core import fields
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0002_auto_20160608_2358'),
+        ('spbgti_core', '0002_auto_20160608_2358'),
         ('api', '0001_initial'),
     ]
 
@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('exercise_name', models.CharField(max_length=100, verbose_name='Название занятия')),
                 ('pair', fields.PairField(choices=[('1', 'Первая'), ('2', 'Вторая'), ('3', 'Третья'), ('4', 'Четвертая'), ('5', 'Пятая')], default=1, max_length=1, verbose_name='Номер пары')),
                 ('day', fields.DayOfTheWeekField(choices=[('1', 'Понедельник'), ('2', 'Вторник'), ('3', 'Среда'), ('4', 'Четверг'), ('5', 'Пятница'), ('6', 'Суббота'), ('7', 'Воскресенье')], default=1, max_length=1, verbose_name='День недели')),
-                ('room', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.Room')),
+                ('room', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='spbgti_core.Room')),
             ],
         ),
         migrations.RemoveField(
@@ -37,12 +37,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='schedule',
             name='group',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.Group'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='spbgti_core.Group'),
         ),
         migrations.AlterField(
             model_name='schedule',
             name='semester',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.Semester'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='spbgti_core.Semester'),
         ),
         migrations.DeleteModel(
             name='ClassRecord',
@@ -55,6 +55,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='exercise',
             name='teacher',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.Teacher'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='spbgti_core.Teacher'),
         ),
     ]

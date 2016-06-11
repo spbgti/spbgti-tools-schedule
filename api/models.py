@@ -1,11 +1,11 @@
 from django.db import models
 
-from core.models import Group
-from core.models import Room
-from core.models import Semester
-from core.models import Teacher
-from fields import DayOfTheWeekField
-from fields import PairField
+from spbgti_core.fields import DayOfTheWeekField
+from spbgti_core.fields import PairField
+from spbgti_core.models import Group
+from spbgti_core.models import Room
+from spbgti_core.models import Semester
+from spbgti_core.models import Teacher
 
 
 class Schedule(models.Model):
