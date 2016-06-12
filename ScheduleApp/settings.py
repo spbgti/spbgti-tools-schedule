@@ -127,6 +127,10 @@ STATICFILES_DIRS = (
 )
 
 # Update database configuration with $DATABASE_URL.
-if not os.environ["LOCAL"] == "YES":
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+try:
+    if not os.environ["LOCAL"] == "YES":
+        db_from_env = dj_database_url.config(conn_max_age=500)
+        DATABASES['default'].update(db_from_env)
+except KeyError:
+    pass
+

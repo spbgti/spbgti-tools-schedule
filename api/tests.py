@@ -1,5 +1,7 @@
 from unittest import TestCase
 
+from api.models import Schedule
+from spbgti_core.fields import PairField
 from spbgti_core.models import Room, Location
 
 
@@ -13,4 +15,6 @@ class RoomTestCase(TestCase):
 
     def test_room_str_is_equal_to_location_str(self):
         room = Room.objects.get(pk=1)
-        self.assertEqual(str(room), self.location_name)
+        self.assertEqual(str(room), self.location_name + " " + self.room_name)
+
+

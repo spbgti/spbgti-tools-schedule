@@ -12,10 +12,9 @@ class Schedule(models.Model):
     group = models.ForeignKey(Group)
     semester = models.ForeignKey(Semester)
 
-    # TODO fix this
     def __str__(self):
-        return "Группа - " + str(self.group) + \
-               ", семестр " + str(self.semester)
+        return "Группа - %s, семестр %s" % \
+               (str(self.group), str(self.semester))
 
 
 class Exercise(models.Model):
@@ -29,6 +28,5 @@ class Exercise(models.Model):
     day = DayOfTheWeekField("День недели", default=1)
 
     def __str__(self):
-        return str(self.pair) + " пара" + \
-               " в " + str(self.day) + \
-               str(self.exercise_name)
+        return "%s пара в %s, %s" % \
+               (self.get_pair_display(), self.get_day_display(), str(self.exercise_name))
