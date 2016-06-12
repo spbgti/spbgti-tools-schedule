@@ -18,3 +18,6 @@ deploy:
   api_key:
     secure: 4c01be97-e60c-4184-be25-b4c3aa2d2fd4
   app: spbgti-tools-schedule
+  run:
+    - "python manage.py syncdb --noinput --settings=settings.heroku"
+    - "python manage.py migrate --all --settings=settings.heroku"
