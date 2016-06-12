@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/fonts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/login.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/staticfile.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Bold-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Light-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Regular-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/base.css" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/base.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/fonts.css" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/fonts.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/css/login.css" afterPath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScheduleApp/settings.py" afterPath="$PROJECT_DIR$/ScheduleApp/settings.py" />
     </list>
     <list id="0a165f83-50ab-425d-b87a-d02c6b38b23e" name="ST-6 Fix issue with schedule models from admin" comment="Added CI configs" />
     <ignored path="spbgti-tools-schedule.iws" />
@@ -59,7 +60,7 @@
         </entry>
       </file>
       <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/base.css">
+        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17388">
               <caret line="966" column="1" selection-start-line="966" selection-start-column="1" selection-end-line="966" selection-end-column="1" />
@@ -69,7 +70,7 @@
         </entry>
       </file>
       <file leaf-file-name="fonts.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/fonts.css">
+        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/fonts.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="12" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="12" />
@@ -79,7 +80,7 @@
         </entry>
       </file>
       <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/login.css">
+        <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
@@ -263,24 +264,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spbgti-tools-schedule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spbgti-tools-schedule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheduleApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -304,6 +287,7 @@
       <recent name="C:\Users\Даниил\PycharmProjects\spbgti-tools-core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniil\PycharmProjects\spbgti-tools-schedule\ScheduleApp\staticfiles\admin" />
       <recent name="C:\Users\Daniil\PycharmProjects\spbgti-tools-schedule\ScheduleApp\staticfiles\css" />
       <recent name="C:\Users\Daniil\PycharmProjects\spbgti-tools-schedule\ScheduleApp" />
       <recent name="C:\Users\Даниил\PycharmProjects\spbgti-tools-core\core" />
@@ -775,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465752776290</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="CI. Set files for Heroku">
+      <created>1465753205846</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1465753205846</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers>
       <YouTrack shared="false" url="http://spbgti.myjetbrains.com/youtrack">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1199,7 +1190,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/login.css">
+    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
@@ -1207,7 +1198,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/base.css">
+    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17388">
           <caret line="966" column="1" selection-start-line="966" selection-start-column="1" selection-end-line="966" selection-end-column="1" />
@@ -1215,7 +1206,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/css/fonts.css">
+    <entry file="file://$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="12" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="12" />
