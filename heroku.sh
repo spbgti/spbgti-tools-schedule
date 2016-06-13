@@ -1,2 +1,2 @@
-python manage.py makemigrations --all --settings=settings.heroku
-python manage.py migrate --all --settings=settings.heroku
+python manage.py makemigrations
+python manage.py migrate
