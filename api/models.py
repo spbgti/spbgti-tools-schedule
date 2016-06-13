@@ -2,6 +2,7 @@ from django.db import models
 
 from spbgti_core.fields import DayOfTheWeekField
 from spbgti_core.fields import PairField
+from spbgti_core.fields import ParityField
 from spbgti_core.models import Group
 from spbgti_core.models import Room
 from spbgti_core.models import Semester
@@ -18,14 +19,15 @@ class Schedule(models.Model):
 
 
 class Exercise(models.Model):
-    schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE, blank=True, null=True)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, blank=True, null=True)
     # TODO should have a list of teachers binded
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, blank=True, null=True)
 
     exercise_name = models.CharField("Название занятия", max_length=100)
     pair = PairField("Номер пары", default=1)
     day = DayOfTheWeekField("День недели", default=1)
+    parity = ParityField("Четность", default=1)
 
     def __str__(self):
         return "%s пара в %s, %s" % \
