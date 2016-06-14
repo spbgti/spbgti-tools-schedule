@@ -1,6 +1,6 @@
 from django.db import models
 
-from core.fields import PositionField, RANK, POSITION
+from core.fields import PositionField
 from core.fields import RankField
 
 
