@@ -21,8 +21,7 @@ class Schedule(models.Model):
 class Exercise(models.Model):
     schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE, blank=True, null=True)
     room = models.ForeignKey(Room, on_delete=models.CASCADE, blank=True, null=True)
-    # TODO should have a list of teachers binded
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, blank=True, null=True)
+    teacher = models.ManyToManyField(Teacher)
 
     exercise_name = models.CharField("Название занятия", max_length=100)
     pair = PairField("Номер пары", default=1)
