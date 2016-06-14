@@ -127,6 +127,8 @@ STATICFILES_DIRS = (
 )
 
 # Update database configuration with $DATABASE_URL.
+# TODO fix to more comfortable. I think we should have only one place for env. var - REMOTE=YES on service.
+# TODO so we should use db in case REMOTE == YES and exists
 try:
     if not os.environ["LOCAL"] == "YES":
         db_from_env = dj_database_url.config(conn_max_age=500)
