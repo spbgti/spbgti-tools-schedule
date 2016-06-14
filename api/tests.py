@@ -1,8 +1,8 @@
+from spbgti_core.models import Room, Location
 from unittest import TestCase
 
 from api.models import Schedule
-from spbgti_core.fields import PairField
-from spbgti_core.models import Room, Location
+from core.fields import PairField
 
 
 class RoomTestCase(TestCase):

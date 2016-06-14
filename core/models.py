@@ -1,7 +1,7 @@
 from django.db import models
 
-from spbgti_core.fields import PositionField, RANK, POSITION
-from spbgti_core.fields import RankField
+from core.fields import PositionField, RANK, POSITION
+from core.fields import RankField
 
 
 class Group(models.Model):

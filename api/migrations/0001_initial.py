@@ -6,7 +6,7 @@ import django.db.models.deletion
 import django.utils.timezone
 from django.db import migrations, models
 
-from spbgti_core import fields
+from core import fields
 
 
 class Migration(migrations.Migration):

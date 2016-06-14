@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import django.db.models.deletion
 from django.db import migrations, models
 
-from spbgti_core import fields
+from core import fields
 
 
 class Migration(migrations.Migration):
