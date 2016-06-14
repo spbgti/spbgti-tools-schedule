@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ScheduleApp.iml" filepath="$PROJECT_DIR$/.idea/ScheduleApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../spbgti-tools-core/.idea/spbgti-tools-core.iml" filepath="$PROJECT_DIR$/../spbgti-tools-core/.idea/spbgti-tools-core.iml" />
     </modules>
   </component>
 </project>
