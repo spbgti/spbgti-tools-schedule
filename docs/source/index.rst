@@ -6,8 +6,13 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
+   :titlesonly:
+   :glob:
+   :hidden:
 
    general_plans
+   ci_process
    contact
 
 
