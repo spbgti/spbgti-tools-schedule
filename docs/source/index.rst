@@ -6,9 +6,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
    :titlesonly:
-   :glob:
 
    general_plans
    ci_process

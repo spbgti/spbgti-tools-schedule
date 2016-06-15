@@ -9,8 +9,10 @@ CI process description
 
 :Database: : Postgres
 
+
+
 .. image:: _static/staging.png
-   :width: 360px
+   :width: 540px
    :alt: CI process
 
 
