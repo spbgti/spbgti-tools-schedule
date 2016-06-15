@@ -49,8 +49,8 @@
       <file leaf-file-name="schedule_api.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="196">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -626,13 +626,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466009956087</updated>
     </task>
-    <task id="LOCAL-00006" summary="CI integration setting">
-      <created>1465642034178</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1465642034178</updated>
-    </task>
     <task id="LOCAL-00007" summary="CI integration setting. Added requirements.txt">
       <created>1465644778075</created>
       <option name="number" value="00007" />
@@ -970,7 +963,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466012432682</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Ended testings with rst">
+      <created>1466012508616</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1466012508616</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1436,8 +1436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="196">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
           <folding />
         </state>
       </provider>
