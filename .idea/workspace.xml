@@ -49,8 +49,8 @@
       <file leaf-file-name="schedule_api.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+            <state relative-caret-position="108">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -626,19 +626,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466009956087</updated>
     </task>
-    <task id="ST-6" summary="Fix issue with schedule models from admin">
-      <branch name="master" repository="C:\Users\Даниил\PycharmProjects\spbgti-tools-schedule" original="true" />
-      <branch name="master" repository="C:\Users\Даниил\PycharmProjects\spbgti-tools-core" original="true" />
-      <branch name="ST-6" repository="C:\Users\Даниил\PycharmProjects\spbgti-tools-schedule" />
-      <branch name="ST-6" repository="C:\Users\Даниил\PycharmProjects\spbgti-tools-core" />
-      <changelist id="0a165f83-50ab-425d-b87a-d02c6b38b23e" name="ST-6 Fix issue with schedule models from admin" comment="" />
-      <created>1465564982602</created>
-      <option name="issue" value="true" />
-      <option name="number" value="6" />
-      <option name="presentableId" value="ST-6" />
-      <option name="project" value="ST" />
-      <updated>1465642003896</updated>
-    </task>
     <task id="LOCAL-00006" summary="CI integration setting">
       <created>1465642034178</created>
       <option name="number" value="00006" />
@@ -976,7 +963,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466012303399</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Ended testings with rst">
+      <created>1466012432682</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1466012432682</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1072,7 +1066,8 @@
     <MESSAGE value="Correct shell script" />
     <MESSAGE value="Correct shell script. Add images" />
     <MESSAGE value="Add images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add images" />
+    <MESSAGE value="Ended testings with rst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ended testings with rst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1441,8 +1436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+        <state relative-caret-position="108">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
         </state>
       </provider>

@@ -4,8 +4,7 @@ Schedule service API
 Here we listed all the api, that should be implemented for **schedule service**.
 
 .. code-block:: python
-   ::
-
+   
    """
     returns all groups that have any schedules. Old schedules supposed to be deleted;
    """
