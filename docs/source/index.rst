@@ -9,7 +9,6 @@ Contents:
    :numbered:
    :titlesonly:
    :glob:
-   :hidden:
 
    general_plans
    ci_process

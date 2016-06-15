@@ -1,5 +1,8 @@
+General plan
+============
+
 SPBGTI tools services plan and decisions (EPIC)
-===============================================
+###############################################
 
 :Language: : Python 3.5
 
