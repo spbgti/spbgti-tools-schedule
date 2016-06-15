@@ -52,7 +52,7 @@ Here we listed all the api, that should be implemented for **schedule service**.
     Returns information about the nearest class
     for a specified group.
 
-    This could be used in case you need to find the next pair, 
+    This could be used in case you need to find the next pair,
     which you should visit.
    """
 

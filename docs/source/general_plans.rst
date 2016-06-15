@@ -4,17 +4,17 @@ General plan
 SPBGTI tools services plan and decisions (EPIC)
 ###############################################
 
-:Language: : Python 3.5
+:Language:  Python 3.5
 
-:Platform: : Django
+:Platform:  Django
 
-:Server: : Ubuntu/Debian Linux with Docker Swarm (servers > 2 for load balancing)
+:Server:  Ubuntu/Debian Linux with Docker Swarm (servers > 2 for load balancing)
 
-:Database: : Not decided yet, at this point that’s SQLite, but should be changed to some object-oriented later
+:Database:  Not decided yet, at this point that’s SQLite, but should be changed to some object-oriented later
 
-:Architecture: : Micro services
+:Architecture:  Micro services
 
-:Features: :
+:Features:
 
 + Scheduling feature;
 + Library service feature;
