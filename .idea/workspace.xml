@@ -49,8 +49,8 @@
       <file leaf-file-name="schedule_api.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="196">
+              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -626,13 +626,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466009956087</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added some views for tests">
-      <created>1465328547116</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1465328547116</updated>
-    </task>
     <task id="LOCAL-00002" summary="Merge with view changes from my laptop">
       <created>1465454886190</created>
       <option name="number" value="00002" />
@@ -976,7 +969,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466011625115</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Add images">
+      <created>1466011680884</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1466011680885</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1441,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="196">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
           <folding />
         </state>
       </provider>

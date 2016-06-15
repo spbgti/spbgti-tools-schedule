@@ -2,7 +2,8 @@ Schedule service API
 ====================
 
 
-.. code-block::
+.. code-block:: python
+   :linenos:
 
    get_all_groups()
 
@@ -10,25 +11,28 @@ returns all groups that have any schedules. Old schedules supposed to be deleted
 
 .. code-block:: python
    :linenos:
-   
+
    get_schedule_by_group(group_id)
 
 returns full schedule for the selected group;
 
 .. code-block:: python
    :linenos:
+
    get_schedule_by_group_and_day(group_id, day)
 
 returns one day schedule for specific group;
 
 .. code-block:: python
    :linenos:
+
    get_schedule_by_teacher(teacher_id)
 
 returns the teacher’s schedule. This will help students to find teacher, when he is needed;
 
 .. code-block:: python
    :linenos:
+
    get_schedule_by_location_room(room_id)
 
 returns schedule for a particular room. This will help students check if a room is empty in a specific time;
@@ -41,6 +45,7 @@ returns empty rooms that could be used on a specific location in a selected time
 
 .. code-block:: python
    :linenos:
+   
    get_schedule_by_group_nearest(group_id)
 
 returns information about the nearest class for a specified group. This could be used in case you need to find the next pair, which you should visit.
