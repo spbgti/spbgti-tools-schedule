@@ -4,6 +4,7 @@ Schedule service API
 
 .. code-block:: python
    :linenos:
+   
    """
     returns all groups that have any schedules. Old schedules supposed to be deleted;
    """
