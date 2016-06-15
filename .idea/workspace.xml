@@ -49,8 +49,8 @@
       <file leaf-file-name="schedule_api.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+            <state relative-caret-position="180">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -626,13 +626,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466009956087</updated>
     </task>
-    <task id="LOCAL-00002" summary="Merge with view changes from my laptop">
-      <created>1465454886190</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1465454886190</updated>
-    </task>
     <task id="LOCAL-00003" summary="Merge with view changes from my laptop">
       <created>1465550735394</created>
       <option name="number" value="00003" />
@@ -976,7 +969,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466011680885</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Add images">
+      <created>1466011878196</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1466011878196</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1313,7 +1313,7 @@
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1355,7 +1355,7 @@
         <state relative-caret-position="450">
           <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding>
-            <element signature="e#645#677#0" expanded="true" />
+            <element signature="e#645#677#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,7 +1389,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1441,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        <state relative-caret-position="180">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
