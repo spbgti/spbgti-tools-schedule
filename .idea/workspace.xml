@@ -50,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -941,7 +941,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466010939793</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Add images">
+      <created>1466011015069</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1466011015069</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1407,7 +1414,7 @@
     <entry file="file://$PROJECT_DIR$/docs/source/schedule_api.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
           <folding />
         </state>
       </provider>
