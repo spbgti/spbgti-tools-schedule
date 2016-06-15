@@ -1,7 +1,8 @@
 Schedule service API
 ====================
 
-.. code-block:: python
+
+.. code-block::
    get_all_groups()
 
 returns all groups that have any schedules. Old schedules supposed to be deleted;
