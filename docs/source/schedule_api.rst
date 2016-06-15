@@ -10,6 +10,7 @@ returns all groups that have any schedules. Old schedules supposed to be deleted
 
 .. code-block:: python
    :linenos:
+   
    get_schedule_by_group(group_id)
 
 returns full schedule for the selected group;
