@@ -10,6 +10,7 @@ Contents:
 
    general_plans
    ci_process
+   schedule_api
    contact
 
 
