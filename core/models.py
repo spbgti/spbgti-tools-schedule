@@ -7,6 +7,9 @@ from core.fields import RankField
 class Group(models.Model):
     number = models.CharField("Номер группы", max_length=10)
 
+    def to_json(self):
+        return dict(group_id=self.id, number=self.number)
+
     def __str__(self):
         return "%s" % str(self.number)
 
