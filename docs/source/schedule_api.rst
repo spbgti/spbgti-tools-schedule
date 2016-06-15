@@ -6,7 +6,7 @@ Here we listed all the api, that should be implemented for **schedule service**.
 .. code-block:: python
 
    """
-    returns all groups that have any schedules.
+    Returns all groups that have any schedules.
     Old schedules supposed to be deleted;
    """
 
@@ -49,10 +49,10 @@ Here we listed all the api, that should be implemented for **schedule service**.
    def get_empty_rooms_by_location_and_time(location_id, time_range):
 
    """
-    returns information about the nearest class
+    Returns information about the nearest class
     for a specified group.
 
-    This could be used in case you need to find the next pair, \
+    This could be used in case you need to find the next pair, 
     which you should visit.
    """
 
