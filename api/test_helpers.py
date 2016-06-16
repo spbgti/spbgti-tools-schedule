@@ -1,23 +1,21 @@
 import json
 
-from core.models import Group
-
 filled = False
 
 
-def fill_database(test):
-    def test_wrapper(self):
-        global filled
-        if not filled:
-            Group.objects.create(number='459')
-            filled = True
-        test(self)
+def fill_database(filler):
+    def real_decorator(test):
+        def wrapper(*args, **kwargs):
+            global filled
+            if not filled:
+                filler()
+                filled = True
+            test(*args, **kwargs)
 
-    return test_wrapper
+        return wrapper
+
+    return real_decorator
 
 
-def are_json_objects_equal(jobj1, jobj2):
-    obj1 = json.loads(jobj1)
-    obj2 = json.loads(jobj2)
-
-    return obj1 == obj2
+def is_object_equal_to_json(object, json_str):
+    return object == json.loads(json_str)
