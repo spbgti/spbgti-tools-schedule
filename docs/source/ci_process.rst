@@ -1,13 +1,13 @@
 CI process description
 ======================
 
-:Build server: : Travis CI
+:Build server:  Travis CI
 
-:VCS: : GitHub
+:VCS:  GitHub
 
-:Server: : Heroku
+:Server:  Heroku
 
-:Database: : Postgres
+:Database:  Postgres
 
 
 
