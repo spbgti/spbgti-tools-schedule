@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'schedule.apps.ScheduleConfig',
     'api.apps.ApiConfig',
     'core.apps.CoreConfig',
     'django.contrib.admin',

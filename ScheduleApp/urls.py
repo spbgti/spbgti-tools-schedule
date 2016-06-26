@@ -22,7 +22,6 @@ from ScheduleApp import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^schedule/', include('schedule.urls')),
     url(r'^api/', include('api.urls')),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT})
 ]
