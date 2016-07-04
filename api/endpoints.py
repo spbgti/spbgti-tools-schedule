@@ -15,8 +15,8 @@ def get_all_groups(request):
 # TODO Check schedule exists for this group at this semester
 # TODO Think of automatization of error output
 def get_schedule_by_group(request, group_number):
-    group = Group.objects.get(number=group_number)
-    current_semester = Semester.objects.get(year=date.today().year, number=_get_current_semester())
+    group = Group.objects.filter(number=group_number).first()
+    current_semester = Semester.objects.filter(year=date.today().year, number=_get_current_semester()).first()
     schedule = group.schedule_set.filter(semester=current_semester)
 
     if schedule:
