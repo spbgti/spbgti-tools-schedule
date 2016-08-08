@@ -45,6 +45,7 @@ class Teacher(models.Model):
     name = models.CharField("ФИО", max_length=100)
     rank = RankField('Ученая степень', blank=True, null=True)
     position = PositionField('Должность')
+    # кафедра(ы)?
 
     def to_json(self):
         return dict(teacher_id=self.id,

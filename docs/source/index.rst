@@ -12,6 +12,7 @@ Contents:
    ci_process
    schedule_api
    contact
+   bot_concept
 
 
 
