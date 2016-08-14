@@ -2,12 +2,14 @@ import json
 from datetime import date
 
 from django.http import HttpResponse
+# use JsonResponse
 
 from core.models import Group, Semester
 
 
 def get_all_groups(request):
     result = json.dumps([group.to_json() for group in Group.objects.all()])
+    # return JsonResponse(result)
     return HttpResponse(result, content_type='application/json')
 
 
