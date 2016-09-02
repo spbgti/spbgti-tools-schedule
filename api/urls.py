@@ -1,31 +1,65 @@
-from django.conf.urls import url
 
+from django.conf.urls import url
+from core import models as core_models
+from api import models as api_models
 from api import endpoints
 from . import views
 
 urlpatterns = [
-    url(r'^groups/$', endpoints.groups, name='groups'),
-    url(r'^groups/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})$', endpoints.groups_by_number, name='group_by_number'),
+    url(r'^groups$',
+        endpoints.model_get_and_create, {'model': core_models.Group}, name='groups'),
+    url(r'^groups/id/(?P<group_id>[0-9]+)$',
+        endpoints.group_instance, name='group_by_id'),
+    url(r'^groups/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})$',
+        endpoints.group_instance, name='group_by_number'),
 
-    url(r'^locations/$', endpoints.locations, name='locations'),
-    url(r'^locations/(?P<name>.+)$', endpoints.locations_by_name, name='locations_by_name'),
+    url(r'^locations$',
+        endpoints.model_get_and_create, {'model': core_models.Location}, name='locations'),
+    url(r'locations/id/(?P<location_id>[0-9]+)$',
+        endpoints.location_instance, name='location_by_id'),
+    url(r'^locations/(?P<location_name>.+)$',
+        endpoints.location_instance, name='locations_by_name'),
     # locations by geopos?
 
-    url(r'^rooms/$', endpoints.rooms, name='rooms'),
-    url(r'^rooms/(?P<name>.+)$', endpoints.rooms_by_name, name='rooms_by_name'),
-    url(r'^rooms/location/(?P<locations>.+)$', endpoints.rooms_in_location, name="rooms_in_location"),
+    url(r'^rooms$',
+        endpoints.model_get_and_create, {'model': core_models.Room}, name='rooms'),
+    url(r'rooms/id/(?P<room_id>[0-9]+)$',
+        endpoints.room_instance, name='room_by_id'),
+    url(r'rooms/location/(?P<location_id>[0-9]+)$',
+        endpoints.room_instance, name='room_by_location_id'),
 
-    url(r'^teachers/$', endpoints.teachers, name='teachers'),
-    url(r'^teachers/(?P<name>.+)$', endpoints.teachers_by_name, name='teachers_by_name'),
+    url(r'^teachers$',
+        endpoints.model_get_and_create, {'model': core_models.Teacher}, name='teachers'),
+    url(r'^teachers/id/(?P<teacher_id>[0-9]+)$',
+        endpoints.teacher_instance, name='teacher_by_id'),
 
-    url(r'^semesters/$', endpoints.semesters, name='semesters'),
-    url(r'^semesters/(?P<year>20[0-9]{2})/(?P<number>[12])$', endpoints.semester_by_year_and_number, name='semester_by_year_and_number'),
-    url(r'^semesters/year/(?P<year>20[0-9]{2})/number/(?P<number>[12])$'
+    url(r'^schedules$',
+        endpoints.model_get_and_create, {'model': api_models.Schedule}, name='schedules'),
+    url(r'^schedules/id/(?P<schedule_id>[0-9]+)$',
+        endpoints.schedule_instance, name='schedule_by_id'),
 
-    url(r'^schedules/$', endpoints.schedules, name='schedules'),
-    url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})$', endpoints.schedules_by_group_number, name='schedules_by_group_number'),
-    url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})/(?P<year>20[0-9]{2})/(?P<number>[12])$', endpoints.schedule_by_group_number_and_semester, name='schedule_by_group_number_and_semester'),
-    url(r'^exercises/$', endpoints.exercises, name='exercises'),
-    url(r'^exercises/$', endpoints.exercises, name='exercises'),
-
+    url(r'^exercises$',
+       endpoints.exercise_get_and_create, name='exercises'),
+    url(r'^exercises/id/(?P<exercise_id>[0-9]+)$',
+        endpoints.exercise_instance, name='exercise_by_id'),
 ]
+'''
+
+   url(r'^schedules/$',
+       endpoints.schedules, name='schedules'),
+   url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})$',
+       endpoints.schedules_by_group_number, name='schedules_by_group_number'),
+   url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[A-Za-zА-Яа-я]{0,6})/(?P<year>20[0-9]{2})/(?P<number>[12])$',
+       endpoints.schedule_by_group_number_and_semester, name='schedule_by_group_number_and_semester'),
+
+   url(r'^exercises/$',
+       endpoints.exercises, name='exercises'),
+   url(r'^exercises/schedule/(?P<schedule_id>[0-9]+)$',
+       endpoints.exercises_by_schedule_id, name='exercises_by_schedule_id'),
+   url(r'^exercises/room/(?P<room_id>[0-9]+)$',
+       endpoints.exercises_by_room_id, name='exercises_by_room_id'),
+   url(r'^exercises/teacher/(?P<teacher_id>[0-9]+)$',
+       endpoints.exercises_by_teacher_id, name='exercises_by_teacher_id'),
+   url(r'^exercises/schedule/(?P<schedule_id>[0-9]+)/parity/(?P<parity_num>[1-2])/day/(?P<day_num>[1-7])/pair/(?P<pair_num>[1-5])$',
+       endpoints.exercise_by_place_in_schedule, name='exercise_by_place_in_schedule')
+   '''
