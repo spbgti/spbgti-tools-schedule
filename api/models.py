@@ -34,10 +34,12 @@ class Exercise(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, blank=True, null=True)
     teacher = models.ManyToManyField(Teacher, blank=True)
 
-    name = models.CharField("Название занятия", max_length=100)
+    name = models.CharField("Название занятия", max_length=100, blank=True)
+    type = models.CharField("Тип пары", max_length=100, null=True, blank=True)
     pair = PairField("Номер пары", default=1)
     day = DayOfTheWeekField("День недели", default=1)
-    parity = ParityField("Четность", default=1, blank=True, null=True)
+    parity = ParityField("Четность", default=1, null=True, blank=True)
+
 
     def get_absolute_url(self):
         return reverse('exercise_by_id', kwargs={'exercise_id': self.id})
@@ -49,6 +51,7 @@ class Exercise(models.Model):
                     room_id=self.room.id,
                     teacher=[teacher.id for teacher in self.teacher.all()],
                     name=self.name,
+                    type=self.type,
                     #pair=self.get_pair_display(),
                     #day=self.get_day_display(),
                     #parity=self.get_parity_display())

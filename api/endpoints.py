@@ -135,23 +135,29 @@ def location_instance(request, location_id=None, location_name=None):
 
 
 @csrf_exempt
-def room_instance(request, room_id=None, location_id=None):
+def room_instance(request, room_id=None, location_id=None, name = None):
     room = None
     try:
         if room_id:
             room = Room.objects.get(id=room_id)
         elif location_id:
             room = Room.objects.get(location_id=location_id)
+        elif name:
+            room = Room.objects.get(name=name)
+        else:
+            pass
     except Room.DoesNotExist:
         return HttpResponse("Room not found", status=404)
     return instance_get_put_delete(request, room)
 
 @csrf_exempt
-def teacher_instance(request, teacher_id=None):
+def teacher_instance(request, teacher_id=None, teacher_name=None, position=None, rank = None):
     teacher = None
     try:
         if teacher_id:
             teacher = Teacher.objects.get(id=teacher_id)
+        elif teacher_name:
+            teacher = Teacher.objects.get(name=teacher_name, rank=rank, position=position)
         else:
             pass
     except Teacher.DoesNotExist:
@@ -160,11 +166,13 @@ def teacher_instance(request, teacher_id=None):
 
 
 @csrf_exempt
-def schedule_instance(request, schedule_id=None):
+def schedule_instance(request, schedule_id=None, semester=None, year=None, group_id=None):
     schedule = None
     try:
         if schedule_id:
             schedule = Schedule.objects.get(id=schedule_id)
+        elif semester and year and group_id:
+            schedule = Schedule.objects.get(group_id=group_id, semester=semester, year=year)
         else:
             pass
     except Schedule.DoesNotExist:
@@ -187,11 +195,12 @@ def exercise_get_and_create(request):
             try:
                 query = json.loads(request.body.decode('utf-8'))
                 teachers = query.get('teacher')
-                if teachers:
+                if teachers is not None:
                     del query['teacher']
                     new_model = model(**query)
                     new_model.full_clean()
                     new_model.save()
+                    print(new_model.__dict__)
                     for teacher_id in teachers:
                         if isinstance(teacher_id, int):
                             try:
@@ -222,11 +231,15 @@ def exercise_get_and_create(request):
     pass
 
 @csrf_exempt
-def exercise_instance(request, exercise_id=None):
+def exercise_instance(request, exercise_id=None, schedule_id=None, day=None, pair=None, parity=None):
     exercise = None
     try:
         if exercise_id:
             exercise = Exercise.objects.get(id=exercise_id)
+        elif day and pair and schedule_id:
+            if parity == '':
+                parity = None
+            exercise = Exercise.objects.get(schedule_id=schedule_id, day=day, pair=pair, parity=parity)
         else:
             pass
     except Exercise.DoesNotExist:
@@ -239,7 +252,7 @@ def exercise_instance(request, exercise_id=None):
             try:
                 query = json.loads(request.body.decode('utf-8'))
                 teachers = query.get('teacher')
-                if teachers:
+                if teachers is not None:
                     del query['teacher']
                     model_for_validate = exercise.__class__(**query)
                     model_for_validate.full_clean()
@@ -254,8 +267,8 @@ def exercise_instance(request, exercise_id=None):
                             raise TypeError('teacher[] not id')
                 else:
                     raise TypeError('where teacher[]?')
-            except TypeError:
-                return HttpResponse("Invalid fields in request", status=400)
+            except TypeError as e:
+                return HttpResponse("Invalid fields in request" + str(e), status=400)
             except ValueError:
                 print(exercise.teacher)
                 print(exercise.__class__.__dict__)

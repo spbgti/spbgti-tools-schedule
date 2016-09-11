@@ -54,7 +54,7 @@ class Room(models.Model):
 class Teacher(models.Model):
     name = models.CharField("ФИО", max_length=100)
     rank = RankField('Ученая степень', blank=True, null=True)
-    position = PositionField('Должность')
+    position = PositionField('Должность', blank=True, null=True)
     # кафедра(ы)?
 
     def get_absolute_url(self):
