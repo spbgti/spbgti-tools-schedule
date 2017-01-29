@@ -6,51 +6,53 @@ from api import endpoints
 from . import views
 
 urlpatterns = [
+    #url(r'^groups$',
+    #    endpoints.model_get_and_create, {'model': core_models.Group}, name='groups'),
     url(r'^groups$',
-        endpoints.model_get_and_create, {'model': core_models.Group}, name='groups'),
+        endpoints.GroupView.as_view(), name='groups'),
     url(r'^groups/id/(?P<group_id>[0-9]+)$',
-        endpoints.group_instance, name='group_by_id'),
+        endpoints.GroupView.as_view(), name='group_by_id'),
     url(r'^groups/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я]{0,10}[)]?)$',
-        endpoints.group_instance, name='group_by_number'),
+        endpoints.GroupView.as_view(), name='group_by_number'),
 
     url(r'^locations$',
-        endpoints.model_get_and_create, {'model': core_models.Location}, name='locations'),
+        endpoints.LocationView.as_view(), name='locations'),
     url(r'^locations/id/(?P<location_id>[0-9]+)$',
-        endpoints.location_instance, name='location_by_id'),
+        endpoints.LocationView.as_view(), name='location_by_id'),
     url(r'^locations/(?P<location_name>[а-яА-я\w ]+)$',
-        endpoints.location_instance, name='locations_by_name'),
+        endpoints.LocationView.as_view(), name='locations_by_name'),
     # locations by geopos?
 
     url(r'^rooms$',
-        endpoints.model_get_and_create, {'model': core_models.Room}, name='rooms'),
+        endpoints.RoomView.as_view(), name='rooms'),
     url(r'^rooms/(?P<name>[^\\/]+)$',
-        endpoints.room_instance, name='room_by_name'),
+        endpoints.RoomView.as_view(), name='room_by_name'),
     url(r'^rooms/id/(?P<room_id>[0-9]+)$',
-        endpoints.room_instance, name='room_by_id'),
+        endpoints.RoomView.as_view(), name='room_by_id'),
     url(r'^rooms/location/(?P<location_id>[0-9]+)$',
-        endpoints.room_instance, name='room_by_location_id'),
+        endpoints.RoomView.as_view(), name='room_by_location_id'),
 
     url(r'^teachers$',
-        endpoints.model_get_and_create, {'model': core_models.Teacher}, name='teachers'),
+        endpoints.TeacherView.as_view(), name='teachers'),
     url(r'^teachers/(?P<teacher_name>[^0-9]+)$',
-        endpoints.teacher_instance, name='teacher_by_name'),
+        endpoints.TeacherView.as_view(), name='teacher_by_name'),
     url(r'^teachers/id/(?P<teacher_id>[0-9]+)$',
-        endpoints.teacher_instance, name='teacher_by_id'),
+        endpoints.TeacherView.as_view(), name='teacher_by_id'),
 
     url(r'^schedules$',
-        endpoints.model_get_and_create, {'model': api_models.Schedule}, name='schedules'),
+        endpoints.ScheduleView.as_view(), name='schedules'),
     url(r'^schedules/group/(?P<group_id>[0-9]+)/year/(?P<year>[0-9]+)/semester/(?P<semester>[0-9]+)$',
-        endpoints.schedule_instance, name='schedule_by_semester_and_group'),
+        endpoints.ScheduleView.as_view(), name='schedule_by_semester_and_group'),
     url(r'^schedules/id/(?P<schedule_id>[0-9]+)$',
-        endpoints.schedule_instance, name='schedule_by_id'),
+        endpoints.ScheduleView.as_view(), name='schedule_by_id'),
 
 
     url(r'^exercises$',
-       endpoints.exercise_get_and_create, name='exercises'),
+       endpoints.ExerciseView.as_view(), name='exercises'),
     url(r'^exercises/schedule/(?P<schedule_id>[0-9]+)/day/(?P<day>[1-7]+)/pair/(?P<pair>[1-5]+)/parity/(?P<parity>[12]*)$',
-        endpoints.exercise_instance, name='exercise_by_pair'),
+        endpoints.ExerciseView.as_view(), name='exercise_by_pair'),
     url(r'^exercises/id/(?P<exercise_id>[0-9]+)$',
-        endpoints.exercise_instance, name='exercise_by_id'),
+        endpoints.ExerciseView.as_view(), name='exercise_by_id'),
 ]
 '''
 
