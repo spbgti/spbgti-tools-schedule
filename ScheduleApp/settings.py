@@ -26,7 +26,7 @@ SECRET_KEY = '3ch90&7m)44a8d5on*$exnn(2i@1@pnu!a@v989d)w^*wvqb=y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['spbgti-tools-schedule-staging.herokuapp.com', 'spbgti-tools-schedule.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
