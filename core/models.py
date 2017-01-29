@@ -39,7 +39,7 @@ class Room(models.Model):
     name = models.CharField("Название", max_length=50)
 
     def get_absolute_url(self):
-        return reverse('location_by_id', kwargs={'location_id': self.id})
+        return reverse('room_by_id', kwargs={'room_id': self.id})
 
     def to_json(self):
         return dict(room_id=self.id,
