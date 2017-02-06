@@ -71,7 +71,7 @@ class BaseView(View):
     def get(self, request):
         models = self.model.objects.all()
         if not models:
-            return HttpResponse('No one %s' % self.model.__name__, status=404)
+            models = []
         return JsonResponse([model.to_json() for model in models], safe=False)
 
     def post(self, request):
@@ -154,13 +154,16 @@ class TeacherView(BaseView):
 class ScheduleView(BaseView):
     model = Schedule
 
-    def instance_by_data(self, schedule_id=None, semester=None, year=None, group_id=None):
+    def instance_by_data(self, schedule_id=None, semester=None, year=None, group_number=None):
         try:
             if schedule_id is not None:
                 return self.model.objects.get(id=schedule_id)
-            elif semester and year and group_id:
-                return self.model.objects.get(group_id=group_id, semester=semester, year=year)
+            elif semester and year and group_number:
+                return self.model.objects.get(group=Group.objects.get(number=group_number),
+                                              semester=semester, year=year)
         except self.model.DoesNotExist:
+            return None
+        except Group.DoesNotExist:
             return None
 
 
