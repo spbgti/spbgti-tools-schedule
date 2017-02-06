@@ -71,7 +71,7 @@ class BaseView(View):
     def get(self, request):
         models = self.model.objects.all()
         if not models:
-            return HttpResponse('No one %s' % self.model.__name__, status=404)
+            models = []
         return JsonResponse([model.to_json() for model in models], safe=False)
 
     def post(self, request):
