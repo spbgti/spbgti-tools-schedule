@@ -34,7 +34,7 @@ class Exercise(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, blank=True, null=True)
     teacher = models.ManyToManyField(Teacher, blank=True)
 
-    name = models.CharField("Название занятия", max_length=100, blank=True)
+    name = models.CharField("Название занятия", max_length=120, blank=True)
     type = models.CharField("Тип пары", max_length=100, null=True, blank=True)
     pair = PairField("Номер пары", default=1)
     day = DayOfTheWeekField("День недели", default=1)
