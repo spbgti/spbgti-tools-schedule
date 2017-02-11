@@ -35,7 +35,7 @@ class Location(models.Model):
 
 
 class Room(models.Model):
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, blank=True, null=True)
     name = models.CharField("Название", max_length=50)
 
     def get_absolute_url(self):
