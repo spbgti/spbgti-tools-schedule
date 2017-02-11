@@ -20,7 +20,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../ScheduleApp\templates" />
+        <option value="$MODULE_DIR$/ScheduleApp/templates" />
       </list>
     </option>
   </component>
