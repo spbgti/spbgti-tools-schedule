@@ -230,7 +230,7 @@ class ExerciseView(BaseView):
 
     def get_teachers(self, ids):
         if ids is None:
-            raise TypeError('teacher[] not id')
+            raise TypeError('teachers[] not id')
         teachers = []
         for teacher_id in ids:
             try:
