@@ -48,7 +48,6 @@ class MyView(View):
             for i, cd in enumerate(cds, 1):
                 name, room, types, teachers = cd['name'].strip(), cd['room'].strip() or 'на кафедре', \
                                               cd['types'].strip(), cd['teachers'].split(', ')
-                print(i)
                 if i > 20:
                     day = ((i - 1) // 4) - 4
                 else:
@@ -64,13 +63,12 @@ class MyView(View):
                         parity = None
                     else:
                         parity = 2
-                print(day, pair, parity)
                 if name:
                     exercise, created = Exercise.objects.get_or_create(schedule=schedule, day=day, pair=pair, parity=parity)
                     if created:
                         exercise.name = name
                         exercise.room = Room.objects.get_or_create(name=room)[0]
-                        exercise.types = types
+                        exercise.type = types
                         exercise.save()
                         exercise.teacher.add(*self.get_teachers(teachers))
                         exercise.save()
@@ -83,7 +81,6 @@ class MyView(View):
         for day in range(1, 6):
             for pair in range(1, 5):
                 try:
-                    print(day, pair)
                     exercise = raw_exercises.get(day=day, pair=pair)
                 except Exercise.DoesNotExist:
                     exercise = None
