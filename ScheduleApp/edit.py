@@ -72,7 +72,9 @@ class MyView(View):
                         exercise.save()
                         exercise.teacher.add(*self.get_teachers(teachers))
                         exercise.save()
-        return render(request, 'schedule.html', {'formset': formset})
+        else:
+            return render(request, 'schedule.html', {'formset': formset})
+        return self.get(request, group_number)
 
     def get(self, request, group_number):
         schedule = Schedule.objects.get(semester='2', year='2016', group=Group.objects.get(number=group_number))
