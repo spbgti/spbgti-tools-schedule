@@ -46,7 +46,7 @@ class MyView(View):
             Exercise.objects.filter(schedule=schedule).delete()
             cds = [form.cleaned_data for form in formset]
             for i, cd in enumerate(cds, 1):
-                name, room, types, teachers = cd['name'].strip(), cd['room'].strip() or 'на кафедре', \
+                name, room, types, teachers = cd['name'].strip(), cd['room'].strip().replace('\\', '/') or 'на кафедре', \
                                               cd['types'].strip(), cd['teachers'].split(', ')
                 if i > 20:
                     day = ((i - 1) // 4) - 4
@@ -66,6 +66,7 @@ class MyView(View):
                 if name:
                     exercise, created = Exercise.objects.get_or_create(schedule=schedule, day=day, pair=pair, parity=parity)
                     if created:
+                        print(repr(room))
                         exercise.name = name
                         exercise.room = Room.objects.get_or_create(name=room)[0]
                         exercise.type = types
