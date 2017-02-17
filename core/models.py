@@ -48,7 +48,7 @@ class Room(models.Model):
                     location_id=self.location_id)
 
     def __str__(self):
-        return "%s %s" % (str(self.location.name), str(self.name))
+        return "{}".format(self.name)#"{} {}".format(self.location.name, self.name)
 
 
 class Teacher(models.Model):
