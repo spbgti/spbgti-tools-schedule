@@ -5,7 +5,7 @@ from core.fields import RankField
 from django.core.urlresolvers import reverse
 
 class Group(models.Model):
-    number = models.CharField("Номер группы", max_length=10, unique=True)
+    number = models.CharField("Номер группы", max_length=15, unique=True)
 
     def get_absolute_url(self):
         return reverse('group_by_id', kwargs={'group_id': self.id})
