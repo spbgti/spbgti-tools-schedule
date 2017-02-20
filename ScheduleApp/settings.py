@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_nose',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -73,6 +74,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ScheduleApp.wsgi.application'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=schedule,api',
+]
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -137,4 +144,3 @@ try:
         DATABASES['default'].update(db_from_env)
 except KeyError:
     pass
-
