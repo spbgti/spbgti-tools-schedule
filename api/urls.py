@@ -12,7 +12,7 @@ urlpatterns = [
         endpoints.GroupView.as_view(), name='groups'),
     url(r'^groups/id/(?P<group_id>[0-9]+)$',
         endpoints.GroupView.as_view(), name='group_by_id'),
-    url(r'^groups/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я]{0,10}[)]?)$',
+    url(r'^groups/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я0-9]{0,10}[)]?)$',
         endpoints.GroupView.as_view(), name='group_by_number'),
 
     url(r'^locations$',
@@ -41,7 +41,7 @@ urlpatterns = [
 
     url(r'^schedules$',
         endpoints.ScheduleView.as_view(), name='schedules'),
-    url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я]{0,10}[)]?)/year/(?P<year>[0-9]+)/semester/(?P<semester>[0-9]+)$',
+    url(r'^schedules/group/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я0-9]{0,10}[)]?)/year/(?P<year>[0-9]+)/semester/(?P<semester>[0-9]+)$',
         endpoints.ScheduleView.as_view(), name='schedule_by_semester_and_group'),
     url(r'^schedules/id/(?P<schedule_id>[0-9]+)$',
         endpoints.ScheduleView.as_view(), name='schedule_by_id'),
