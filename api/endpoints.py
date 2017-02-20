@@ -14,6 +14,7 @@ def _get_current_semester():
 
 def only_json(f):
     def wrapper(*args, **kwargs):
+        request = args[1]
         if request.content_type == 'application/json':
             return f(*args, **kwargs)
         else:
