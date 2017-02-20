@@ -10,8 +10,8 @@ def index(request):
     return render(request, 'schedule/index.html', context)
 
 
-def detail(request, id):
-    schedule = get_object_or_404(Schedule, pk=id)
+def detail(request, schedule_id):
+    schedule = get_object_or_404(Schedule, pk=schedule_id)
     return render(request, 'schedule/detail.html', {'group': schedule.group})
 
 

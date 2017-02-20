@@ -59,7 +59,7 @@ class BaseView(View):
             #TODO: работает неправильно - возвращает не те методы + должно возвращать разные методы для разных путей
             return self.http_method_not_allowed(request, *args, **kwargs)
 
-    def instance_by_data(self, **kwargs):
+    def instance_by_data(self, *args, **kwargs):
         """Возвращает инстанс модели или None, если такой нет"""
         raise NotImplementedError
 

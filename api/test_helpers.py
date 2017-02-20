@@ -17,5 +17,5 @@ def fill_database(filler):
     return real_decorator
 
 
-def is_object_equal_to_json(object, json_str):
-    return object == json.loads(json_str)
+def is_object_equal_to_json(obj, json_str):
+    return obj == json.loads(json_str)
