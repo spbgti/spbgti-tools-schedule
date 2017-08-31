@@ -42,7 +42,8 @@ class MyView(View):
     def post(self, request, group_number):
         formset = self.MyFormSet(request.POST, request.FILES)
         if formset.is_valid():
-            schedule = Schedule.objects.get(semester='2', year='2016', group=Group.objects.get(number=group_number))
+            schedule = Schedule.objects.get(semester='1', year='2017',
+                                            group=Group.objects.get(number=group_number))
             Exercise.objects.filter(schedule=schedule).delete()
             cds = [form.cleaned_data for form in formset]
             for i, cd in enumerate(cds, 1):
@@ -78,7 +79,8 @@ class MyView(View):
         return self.get(request, group_number)
 
     def get(self, request, group_number):
-        schedule = Schedule.objects.get(semester='2', year='2016', group=Group.objects.get(number=group_number))
+        schedule = Schedule.objects.get(semester='1', year='2017',
+                                        group=Group.objects.get(number=group_number))
         raw_exercises = Exercise.objects.filter(Q(schedule=schedule), (Q(parity=None) | Q(parity=1)))
         exercises = []
         for day in range(1, 6):
