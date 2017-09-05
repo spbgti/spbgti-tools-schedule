@@ -49,7 +49,7 @@ class Exercise(models.Model):
                     schedule_id=self.schedule.id,
                     #room=self.room.to_json(),
                     room_id=self.room.id,
-                    teachers=[teacher.id for teacher in self.teacher.all()],
+                    teachers=[teacher.name for teacher in self.teacher.all()],
                     name=self.name,
                     type=self.type,
                     #pair=self.get_pair_display(),
