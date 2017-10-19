@@ -1,9 +1,11 @@
 from models import Group, Pair, db
-from peewee import DoesNotExist
-from utils import get_end_semester_date, generate_pair_dicts
+from peewee import DoesNotExist, Query
+from utils import get_end_semester_date, generate_pair_dicts, Days
+from datetime import datetime
+from typing import Tuple
 
 
-def _add_group(group_number):
+def _add_group(group_number: int) -> Tuple[str, bool]:
     """Create new Group
     :param group_number: number of group"""
 
@@ -14,7 +16,7 @@ def _add_group(group_number):
         return 'A Group already exists', False
 
 
-def _add_pair(group_number, pair_name, pair_date, pair_duration):
+def _add_pair(group_number: int, pair_name: str, pair_date: datetime, pair_duration: int) -> Tuple[str, bool]:
     """Create new Pair
     :param group_number: number of group
     :param pair_name: pair name
@@ -34,7 +36,7 @@ def _add_pair(group_number, pair_name, pair_date, pair_duration):
         return 'A Pair already exists', False
 
 
-def _get_pairs_by_date(group_number, date):
+def _get_pairs_by_date(group_number: int, date: datetime) -> Tuple[Query, bool]:
     """Return all Pairs by date"""
     query = Pair.select().join(Group).where(Group.number == group_number, Pair.date == date)
 
@@ -44,14 +46,14 @@ def _get_pairs_by_date(group_number, date):
         return None, False
 
 
-def fill_pairs(group_number, pair_name, pair_duration, pair_start_date, days, pair_end_date=get_end_semester_date()):
+def fill_pairs(group_number: int, pair_name: str, pair_duration: int, pair_start_date: datetime, days: Days,
+               pair_end_date=get_end_semester_date()) -> Tuple[str, bool]:
     try:
         group = Group.get(Group.number == group_number)
     except DoesNotExist:
         return 'Group does not exist', False
 
     # TODO: From this moment we don't have any validation for creating new Pairs
-    pair_dicts = generate_pair_dicts(group_number, pair_name, pair_duration, pair_start_date, pair_end_date, days)
-
+    pair_dicts = generate_pair_dicts(group, pair_name, pair_duration, pair_start_date, pair_end_date, days)
     with db.atomic():
         Pair.insert_many(pair_dicts)

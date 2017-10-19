@@ -1,9 +1,13 @@
 from datetime import datetime, timedelta, time
 from settings import SEMESTER_ENDS, FIRST_SEMESTER_START
 from models import Group
+from typing import List, Tuple, Generator
 
 
-def _get_dates_by_weekday_between_two_dates(weekday, start_date, end_date):
+Days = List[Tuple[int, Tuple[int, int]]]
+
+
+def _get_dates_by_weekday_between_two_dates(weekday: int, start_date: datetime, end_date: datetime) -> Generator:
     """Generate datetimes which represent weekdays in given period
     :param weekday: weekday index <0-6>
     :param start_date: datetime object <left bound of period>
@@ -32,7 +36,8 @@ def get_end_semester_date():
         return datetime(year=now.year, month=SEMESTER_ENDS[1][1], day=SEMESTER_ENDS[1][0])
 
 
-def generate_pair_dicts(group, pair_name, duration, start_date, end_date, days):
+def generate_pair_dicts(group: Group, pair_name: str, duration: int, start_date: datetime, end_date: datetime,
+                        days: Days) -> Generator:
     """Generate dictionaries which represent Pair object (for insert_many method)
     :param group: Group object
     :param pair_name: pair name
