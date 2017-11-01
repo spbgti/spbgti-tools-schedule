@@ -7,11 +7,12 @@ from typing import List, Tuple, Generator
 Days = List[Tuple[int, Tuple[int, int]]]
 
 
-def _get_dates_by_weekday_between_two_dates(weekday: int, start_date: datetime, end_date: datetime) -> Generator:
+def _get_dates_by_weekday_between_two_dates(weekday: int, start_date: datetime, end_date: datetime, period: int) -> Generator:
     """Generate datetimes which represent weekdays in given period
     :param weekday: weekday index <0-6>
     :param start_date: datetime object <left bound of period>
-    :param end_date: datetime object <right bound of period>"""
+    :param end_date: datetime object <right bound of period>
+    :param period: period between dates as number of weeks"""
     current_weekday_date = start_date + timedelta(days=weekday-start_date.weekday())  # Find first date by weekday
 
     if current_weekday_date < start_date:
@@ -19,7 +20,7 @@ def _get_dates_by_weekday_between_two_dates(weekday: int, start_date: datetime, 
 
     while start_date <= current_weekday_date <= end_date:
         yield current_weekday_date
-        current_weekday_date += timedelta(days=7)
+        current_weekday_date += timedelta(days=7*period)
 
     if start_date <= current_weekday_date <= end_date:
         yield current_weekday_date
@@ -37,7 +38,7 @@ def get_end_semester_date():
 
 
 def generate_pair_dicts(group: Group, pair_name: str, duration: int, start_date: datetime, end_date: datetime,
-                        days: Days) -> Generator:
+                        days: Days, period: int) -> Generator:
     """Generate dictionaries which represent Pair object (for insert_many method)
     :param group: Group object
     :param pair_name: pair name
@@ -50,13 +51,13 @@ def generate_pair_dicts(group: Group, pair_name: str, duration: int, start_date:
             (weekday, (hour, minutes)
         ]
         where weekday is index of week <0-6>
-    """
+    :param period: period between dates as number of weeks"""
     for day in days:
         weekday = day[0]
         hour = day[1][0]
         minute = day[1][1]
         # TODO: Add pair cheks, if allowed to create new pair
-        dates = _get_dates_by_weekday_between_two_dates(weekday, start_date, end_date)
+        dates = _get_dates_by_weekday_between_two_dates(weekday, start_date, end_date, period)
 
         for date in dates:
             yield {'group': group,
