@@ -1,8 +1,8 @@
-from datetime import datetime, timedelta, time
-from settings import SEMESTER_ENDS, FIRST_SEMESTER_START
-from models import Group
+from datetime import datetime, timedelta
 from typing import List, Tuple, Generator
 
+from main.models import Group
+from settings import SEMESTER_ENDS, FIRST_SEMESTER_START
 
 Days = List[Tuple[int, Tuple[int, int]]]
 
@@ -24,6 +24,12 @@ def _get_dates_by_weekday_between_two_dates(weekday: int, start_date: datetime, 
 
     if start_date <= current_weekday_date <= end_date:
         yield current_weekday_date
+
+
+def datetima_as_date(date: datetime) -> datetime:
+    """Remove all info from datetime except year, month and day
+    ;param date: datetime object to clarify"""
+    return date.replace(hour=0, minute=0, second=0, microsecond=0)
 
 
 def get_end_semester_date():
