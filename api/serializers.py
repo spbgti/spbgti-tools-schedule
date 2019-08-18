@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from rest_framework.utils.serializer_helpers import ReturnDict
 
 from core import models
 from api import models as api_models
