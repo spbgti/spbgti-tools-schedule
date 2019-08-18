@@ -2,7 +2,7 @@ from django.db import models
 
 from core.fields import PositionField
 from core.fields import RankField
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 class Group(models.Model):
     number = models.CharField("Номер группы", max_length=15, unique=True)

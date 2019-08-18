@@ -7,10 +7,11 @@ from core.fields import DayOfTheWeekField
 from core.fields import PairField
 from core.fields import ParityField
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
+
 
 class Schedule(models.Model):
-    group = models.ForeignKey(Group)
+    group = models.ForeignKey(Group, on_delete=models.PROTECT)
     year = models.CharField("Год", max_length=4, default='2016')
     semester = models.CharField("Номер семестра", max_length=1, default='1')
 
