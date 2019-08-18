@@ -8,26 +8,11 @@ from api import endpoints
 from . import views
 router = SimpleRouter(trailing_slash=False)
 router.register('groups', viewsets.GroupViewSet)
+router.register('locations', viewsets.LocationViewSet)
+router.register('rooms', viewsets.RoomViewSet)
 urlpatterns = router.urls
 
 urlpatterns += [
-    url(r'^locations$',
-        endpoints.LocationView.as_view(), name='locations'),
-    url(r'^locations/id/(?P<location_id>[0-9]+)$',
-        endpoints.LocationView.as_view(), name='location_by_id'),
-    url(r'^locations/(?P<location_name>[а-яА-я\w ]+)$',
-        endpoints.LocationView.as_view(), name='locations_by_name'),
-    # locations by geopos?
-
-    url(r'^rooms$',
-        endpoints.RoomView.as_view(), name='rooms'),
-    url(r'^rooms/(?P<name>[^\\/]+)$',
-        endpoints.RoomView.as_view(), name='room_by_name'),
-    url(r'^rooms/id/(?P<room_id>[0-9]+)$',
-        endpoints.RoomView.as_view(), name='room_by_id'),
-    url(r'^rooms/location/(?P<location_id>[0-9]+)$',
-        endpoints.RoomView.as_view(), name='room_by_location_id'),
-
     url(r'^teachers$',
         endpoints.TeacherView.as_view(), name='teachers'),
     url(r'^teachers/(?P<teacher_name>[^0-9]+)$',
