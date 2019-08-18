@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="Housekeeping: first iteration">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-    </list>
+    <list default="true" id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="Housekeeping: oh-uh" />
     <list id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="temp fix">
       <change beforePath="$PROJECT_DIR$/.idea/ScheduleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScheduleApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -1270,7 +1268,7 @@
       <option name="project" value="LOCAL" />
       <updated>1566121872603</updated>
       <workItem from="1566121873548" duration="1173000" />
-      <workItem from="1566123072535" duration="220000" />
+      <workItem from="1566123072535" duration="486000" />
     </task>
     <task id="LOCAL-00043" summary="Housekeeping: first iteration">
       <created>1566123125805</created>
@@ -1279,7 +1277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566123125805</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Housekeeping: oh-uh">
+      <created>1566123421909</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1566123421909</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers>
       <YouTrack shared="false" url="http://spbgti.myjetbrains.com/youtrack">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1437,7 +1442,8 @@
     <MESSAGE value="small fixes" />
     <MESSAGE value="set non-required location field in room" />
     <MESSAGE value="Housekeeping: first iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping: first iteration" />
+    <MESSAGE value="Housekeeping: oh-uh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping: oh-uh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
