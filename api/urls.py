@@ -1,11 +1,7 @@
-
-from django.conf.urls import url
 from rest_framework.routers import SimpleRouter
 
-from core import models as core_models
-from api import models as api_models, viewsets
-from api import endpoints
-from . import views
+from api import viewsets
+
 router = SimpleRouter(trailing_slash=False)
 router.register('groups', viewsets.GroupViewSet)
 router.register('locations', viewsets.LocationViewSet)
