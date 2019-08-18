@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="Housekeeping: oh-uh">
+    <list default="true" id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="Housekeeping: migrate app to django 2.0">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScheduleApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScheduleApp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/edit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/static/staticfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api/viewsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/staticfiles/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScheduleApp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/endpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <list id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="temp fix">
       <change beforePath="$PROJECT_DIR$/.idea/ScheduleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScheduleApp.iml" afterDir="false" />
@@ -51,8 +68,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -65,12 +82,6 @@
     <option name="RECENT_COMMON_BRANCH" value="ST-30" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -104,7 +115,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="start.from.branch" value="master" />
   </component>
   <component name="RecentsManager">
@@ -430,7 +441,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LOCAL" value="YES" />
-        <env name="DJANGO_SETTINGS_MODULE" value="ScheduleApp.settings" />
+        <env name="DJANGO_SETTINGS_MODULE" value="main_app.settings" />
         <env name="DATABASE_URL" value="postgres://ogjmudjqvuqsdh:lgXkIM__Bk2M6CEuQJyloVjfyv@ec2-54-228-226-93.eu-west-1.compute.amazonaws.com:5432/d69b2pucrl47or" />
       </envs>
       <option name="SDK_HOME" value="" />
@@ -509,13 +520,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1485532259294</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added some views for tests">
-      <created>1465328547116</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1465328547116</updated>
     </task>
     <task id="LOCAL-00002" summary="Merge with view changes from my laptop">
       <created>1465454886190</created>
@@ -866,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566124694170</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Housekeeping: migrate app to django 2.0">
+      <created>1566125150596</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1566125150597</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers>
       <YouTrack url="http://spbgti.myjetbrains.com/youtrack">
         <option name="preferredOpenTaskState">
@@ -958,10 +969,18 @@
     <MESSAGE value="set non-required location field in room" />
     <MESSAGE value="Housekeeping: first iteration" />
     <MESSAGE value="Housekeeping: oh-uh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping: oh-uh" />
+    <MESSAGE value="Housekeeping: migrate app to django 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping: migrate app to django 2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/venvs/spbgti-tools-schedule/lib/python3.7/site-packages/rest_framework/mixins.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

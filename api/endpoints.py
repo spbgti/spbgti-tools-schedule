@@ -110,6 +110,8 @@ class BaseView(View):
         return response
 
 
+
+
 class GroupView(BaseView):
     model = Group
 

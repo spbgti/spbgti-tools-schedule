@@ -1,20 +1,16 @@
 
 from django.conf.urls import url
+from rest_framework.routers import SimpleRouter
+
 from core import models as core_models
-from api import models as api_models
+from api import models as api_models, viewsets
 from api import endpoints
 from . import views
+router = SimpleRouter(trailing_slash=False)
+router.register('groups', viewsets.GroupViewSet)
+urlpatterns = router.urls
 
-urlpatterns = [
-    #url(r'^groups$',
-    #    endpoints.model_get_and_create, {'model': core_models.Group}, name='groups'),
-    url(r'^groups$',
-        endpoints.GroupView.as_view(), name='groups'),
-    url(r'^groups/id/(?P<group_id>[0-9]+)$',
-        endpoints.GroupView.as_view(), name='group_by_id'),
-    url(r'^groups/(?P<group_number>[0-9]{1,6}[(]?[A-Za-zА-Яа-я0-9]{0,10}[)]?)$',
-        endpoints.GroupView.as_view(), name='group_by_number'),
-
+urlpatterns += [
     url(r'^locations$',
         endpoints.LocationView.as_view(), name='locations'),
     url(r'^locations/id/(?P<location_id>[0-9]+)$',

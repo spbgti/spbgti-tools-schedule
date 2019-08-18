@@ -1,4 +1,4 @@
-"""ScheduleApp URL Configuration
+"""main_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.conf.urls import include, url
 from django.views.static import serve
 
-from ScheduleApp import settings
+from main_app import settings
 
 from . import edit
 
