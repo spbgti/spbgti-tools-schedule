@@ -1,1 +1,1 @@
-web: gunicorn ScheduleApp.wsgi
+web: gunicorn main_app.wsgi
