@@ -8,6 +8,17 @@ from api.models import Schedule, Exercise
 from core import models
 
 
+def get_by_id(queryset, serializer, pk):
+    """
+    Temporary helper against code duplication.
+
+    Should be removed after API will be rewritten to default id lookup.
+    """
+    inst = get_object_or_404(queryset, pk=pk)
+    serializer = serializer(inst)
+    return Response(serializer.data)
+
+
 class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.GroupSerializer
     lookup_field = 'number'
@@ -15,9 +26,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['GET'], url_path='id/(?P<id>[^/.]+)')
     def get_by_id(self, request, id, pk=None):
-        group = get_object_or_404(self.get_queryset(), pk=id)
-        serializer = self.get_serializer(group)
-        return Response(serializer.data)
+        return get_by_id(self.get_queryset(), self.get_serializer(), id)
 
 
 class LocationViewSet(viewsets.ModelViewSet):
@@ -27,9 +36,7 @@ class LocationViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['GET'], url_path='id/(?P<id>[^/.]+)')
     def get_by_id(self, request, id, pk=None):
-        location = get_object_or_404(self.get_queryset(), pk=id)
-        serializer = self.get_serializer(location)
-        return Response(serializer.data)
+        return get_by_id(self.get_queryset(), self.get_serializer(), id)
 
 
 class RoomViewSet(viewsets.ModelViewSet):
@@ -39,9 +46,7 @@ class RoomViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['GET'], url_path='id/(?P<id>[^/.]+)')
     def get_by_id(self, request, id, pk=None):
-        location = get_object_or_404(self.get_queryset(), pk=id)
-        serializer = self.get_serializer(location)
-        return Response(serializer.data)
+        return get_by_id(self.get_queryset(), self.get_serializer(), id)
 
     @action(detail=False, methods=['GET'], url_path='location/(?P<location_id>[^/.]+)')
     def get_by_parent(self, request, location_id, pk=None):
@@ -57,9 +62,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['GET'], url_path='id/(?P<id>[^/.]+)')
     def get_by_id(self, request, id, pk=None):
-        teacher = get_object_or_404(self.get_queryset(), pk=id)
-        serializer = self.get_serializer(teacher)
-        return Response(serializer.data)
+        return get_by_id(self.get_queryset(), self.get_serializer(), id)
 
 
 class ScheduleViewSet(viewsets.ModelViewSet):
