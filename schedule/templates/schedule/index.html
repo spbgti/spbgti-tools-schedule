@@ -1,9 +1,0 @@
-{% if groups %}
-    <ul>
-    {% for group in groups %}
-        <li><a href="/schedule/{{ group.id }}/">{{ group }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No groups are available.</p>
-{% endif %}
