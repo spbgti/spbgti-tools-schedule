@@ -31,9 +31,8 @@ ALLOWED_HOSTS = ['spbgti-tools-schedule-staging.herokuapp.com', 'spbgti-tools-sc
 # Application definition
 
 INSTALLED_APPS = [
-    'schedule.apps.ScheduleConfig',
-    'api.apps.ApiConfig',
-    'core.apps.CoreConfig',
+    'api',
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,10 +75,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'main_app.wsgi.application'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
-NOSE_ARGS = [
-    '--with-coverage',
-    '--cover-package=schedule,api',
-]
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases

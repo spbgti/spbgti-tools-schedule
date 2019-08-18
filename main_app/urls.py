@@ -24,7 +24,6 @@ from . import edit
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^schedule/', include('schedule.urls')),
     url(r'^api/', include('api.urls')),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     url(r'^edit/(?P<group_number>.*)$', edit.MyView.as_view())
