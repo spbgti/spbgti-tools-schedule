@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="temp fix">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/0002_auto_20160911_0139.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/0003_auto_20160911_0208.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/0004_auto_20160911_0312.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/0005_auto_20170211_2042.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/0002_auto_20160901_1652.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/0003_auto_20160911_0000.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/0004_auto_20170211_2042.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/0005_auto_20170211_2043.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ScheduleApp.iml" afterPath="$PROJECT_DIR$/.idea/ScheduleApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heroku.sh" afterPath="$PROJECT_DIR$/heroku.sh" />
+    <list default="true" id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="Housekeeping: first iteration">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    </list>
+    <list id="8b305412-1a5a-4bfd-a9cc-dd7afc814687" name="Default" comment="temp fix">
+      <change beforePath="$PROJECT_DIR$/.idea/ScheduleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScheduleApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="0a165f83-50ab-425d-b87a-d02c6b38b23e" name="ST-6 Fix issue with schedule models from admin" comment="Added CI configs" />
     <list id="f85bc305-ff83-4579-8421-8c0fa2bd747c" name="ST-30 Create CRUD for api from spbgti-tools-schedule" comment="ST-30 Create CRUD for api from spbgti-tools-schedule" />
@@ -41,11 +31,18 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -1263,8 +1260,26 @@
       <option name="project" value="LOCAL" />
       <updated>1486835070063</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
-    <option name="createBranch" value="false" />
+    <task active="true" id="LOCAL-00042" summary="Migration to django2 and drf">
+      <branch name="master" repository="$PROJECT_DIR$" original="true" />
+      <branch name="Migration_to_django2_and_drf" repository="$PROJECT_DIR$" />
+      <changelist id="82ecd91e-01ea-477b-80fe-fe134a209217" name="Migration to django2 and drf" comment="" />
+      <created>1566121865471</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1566121872603</updated>
+      <workItem from="1566121873548" duration="1173000" />
+      <workItem from="1566123072535" duration="220000" />
+    </task>
+    <task id="LOCAL-00043" summary="Housekeeping: first iteration">
+      <created>1566123125805</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1566123125805</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers>
       <YouTrack shared="false" url="http://spbgti.myjetbrains.com/youtrack">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1421,7 +1436,8 @@
     <MESSAGE value="fix edit types of exercise" />
     <MESSAGE value="small fixes" />
     <MESSAGE value="set non-required location field in room" />
-    <option name="LAST_COMMIT_MESSAGE" value="set non-required location field in room" />
+    <MESSAGE value="Housekeeping: first iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping: first iteration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
