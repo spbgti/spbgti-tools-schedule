@@ -1,7 +1,7 @@
 language: python
 
 python:
-  - "3.5"
+  - "3.7"
 
 env:
   global:
@@ -11,24 +11,4 @@ env:
 
 install: "pip install -r requirements.txt"
 
-script: sh ci_script.sh
-
-notifications:
-  slack: spbgti:DISw2DtYSQ3gQ8jB9NvTbSYG
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: "EP0aof7lpo1hVzHpwGf+iVxoMX5BZSj3Z5AL1urBoGZ00BDxh+8RnG7/udeF71jPaFgevf10TgEHmlbwTBWqJ1GT1vN91k3adhV16zr+OgXhu9Q2sVRotVJSBLA49B3vTRpSxW1xMe56/Q5nTnmwkasb341r2wNzvacS5LeEv1QEo4tDXiSNq01ESN5XbG3h8s08hROfmttYtUFMeVIMqau85RaQKaqHyGdyN8HmPUbBVl6ebtIJ6TYjfnJwD7wnSPFBovpEzzU22C62qNFQrGXdSX0EpaLoqPqpPX+Qz2cygHSOEx2WfyWOY5PQlLWmyVhwjjg7gBFUaSWvFj0oXIye43R5GUvBF9JYSbqrxawk1vqGZhMNDonYb23DEqKLyIv0K4+eb2J14XCeOT7E9zsfpdxqO+zM1vOd79ZoXbRu2O7U3eGsUSejgM+jgAchiuz80scOM1ZV2nSXK3jiTe3ZPpM2Zr0A3Tyx4i3P01uxAebazY5hXkbBuVWPjOTlwe+FC7vKxV41YDQkkXw2pNVc0GE/0fCyoAcnkq0oEBAz+2/qL8FgFP9YpV3ifMi59+Fv9ek7GZ3gBuUAqPVWxGTKAg/jf27feQb1xR0aVG1vvcNkmlBdBZSqtHPEnMVEU04/2DLDkE6yEg4SKm+W0zyQbEgrdpPr4X5MlujaY9w="
-  app:
-    dev:
-      spbgti-tools-schedule-staging
-    master:
-      spbgti-tools-schedule
-  run:
-    dev:
-      - "sh heroku.sh --app spbgti-tools-schedule-staging"
-    master:
-      - "sh heroku.sh --app spbgti-tools-schedule"
-  after_deploy:
-    - echo "Running integration tests"
+script: echo "oh-uh, where is your tests now?!"
