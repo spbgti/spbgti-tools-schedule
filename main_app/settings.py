@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_nose',
     'rest_framework',
     'drf_yasg',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'staticfiles'),
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+}
 
 # Update database configuration with $DATABASE_URL.
 # TODO fix to more comfortable. I think we should have only one place for env. var - REMOTE=YES on service.
