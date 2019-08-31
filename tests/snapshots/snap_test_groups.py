@@ -849,13 +849,6 @@ snapshots['test_basic_filtering 1'] = [
 snapshots['test_no_one_groups 1'] = [
 ]
 
-snapshots['test_case_sensetive_filtering 1'] = [
-    {
-        'group_id': 1,
-        'number': '444м'
-    }
-]
-
 snapshots['test_case_sensitive_filtering 1'] = [
     {
         'group_id': 1,
