@@ -865,3 +865,8 @@ snapshots['test_case_sensitive_filtering 1'] = [
 
 snapshots['test_empty_filtering 1'] = [
 ]
+
+snapshots['test_lookup_access 1'] = {
+    'group_id': 1,
+    'number': '444'
+}

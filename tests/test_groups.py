@@ -85,3 +85,16 @@ def test_empty_filtering(client, snapshot):
         data={'number': '445'},
     ).json()
     snapshot.assert_match(response)
+
+
+def test_lookup_access(client, snapshot):
+    Group.objects.create(
+        number='444',
+    )
+    Group.objects.create(
+        number='445',
+    )
+    response = client.get(
+        '/api/groups/1',
+    ).json()
+    snapshot.assert_match(response)
