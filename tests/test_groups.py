@@ -5,7 +5,6 @@ from core.models import Group
 pytestmark = pytest.mark.django_db
 
 
-
 @pytest.mark.smoke
 def test_one_group(client, snapshot):
     Group.objects.create(
