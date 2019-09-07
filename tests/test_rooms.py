@@ -106,5 +106,3 @@ def test_lookup_access(client, snapshot, locations):
         '/api/rooms/1',
     ).json()
     snapshot.assert_match(response)
-
-
