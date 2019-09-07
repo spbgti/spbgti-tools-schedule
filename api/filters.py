@@ -1,3 +1,7 @@
+from datetime import date
+from typing import Tuple
+
+from django.db.models import Q
 from django_filters import rest_framework as filters
 
 from api.models import Schedule, Exercise
@@ -51,15 +55,44 @@ class ScheduleFilter(filters.FilterSet):
 
 
 class ExerciseFilter(filters.FilterSet):
-    # TODO: make it better, now it isn't sensitive for both-parity exercises
-    # for example: I want to get exercise for "first week" and it's parity "1"
-    # But if exercise has no parity (both week exercise) i get nothing. In this case
-    # parity=1 should means parity=None or parity=1
+    group_id = filters.NumberFilter('schedule__group_id')
+    date = filters.DateFilter(field_name='date', method='filter_by_date')
+
+    def filter_by_date(self, queryset, name, value: date):
+        year, semester, parity, weekday = get_date_parameters(value)
+        exercises = queryset.filter(
+            Q(parity=None) | Q(parity=parity),
+            schedule__year=year,
+            schedule__semester=semester,
+            day=weekday,
+        ).order_by('pair')
+        return exercises
+
     class Meta:
         model = Exercise
         fields = {
-            'schedule': ['exact'],
-            'day': ['exact'],
-            'pair': ['exact'],
-            'parity': ['exact'],
+            'date': [],
+            'group_id': ['exact'],
         }
+
+
+def get_date_parameters(day_date: date) -> Tuple[str, str, str, int]:
+    """
+    Extract schedule parameters from date: weekday, semester, year and other.
+
+    TODO: Move it to Exercise Model Manager
+    """
+    _, week_number, weekday = day_date.isocalendar()
+    if week_number % 2:
+        parity = '1'
+    else:
+        parity = '2'
+
+    if day_date.month >= 9 or day_date.month < 2:
+        semester = '1'
+    else:
+        semester = '2'
+
+    year = day_date.year
+
+    return str(year), semester, parity, weekday
