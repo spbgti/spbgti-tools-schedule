@@ -54,7 +54,6 @@ class TeacherSerializer(serializers.ModelSerializer):
 
 class ExerciseSerializer(serializers.ModelSerializer):
     exercise_id = serializers.IntegerField(source='id')
-    #teachers = TeacherSerializer(many=True, source='teacher')
     teachers = serializers.SerializerMethodField('get_teachers_name')
 
     def get_teachers_name(self, exercise):
