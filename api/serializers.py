@@ -4,6 +4,14 @@ from core import models
 from api import models as api_models
 
 
+class SlugRelatedFieldWithCreation(serializers.SlugRelatedField):
+    def to_internal_value(self, data):
+        instance = self.get_queryset().filter(**{self.slug_field: data}).first()
+        if instance is None:
+            instance = self.get_queryset().create(**{self.slug_field: data})
+        return instance
+
+
 class GroupSerializer(serializers.ModelSerializer):
     group_id = serializers.IntegerField(source='id')
 
@@ -54,10 +62,11 @@ class TeacherSerializer(serializers.ModelSerializer):
 
 class ExerciseSerializer(serializers.ModelSerializer):
     exercise_id = serializers.IntegerField(source='id')
-    teachers = serializers.SerializerMethodField('get_teachers_name')
-
-    def get_teachers_name(self, exercise):
-        return [t.name for t in exercise.teacher.all()]
+    teachers = SlugRelatedFieldWithCreation(
+        slug_field='name',
+        many=True,
+        queryset=models.Teacher.objects.all(),
+    )
 
     class Meta:
         model = api_models.Exercise

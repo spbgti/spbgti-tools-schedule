@@ -35,7 +35,7 @@ class Room(models.Model):
 
 
 class Teacher(models.Model):
-    name = models.CharField("ФИО", max_length=100)
+    name = models.CharField("ФИО", unique=True, max_length=100)
     rank = RankField('Ученая степень', blank=True, null=True)
     position = PositionField('Должность', blank=True, null=True)
     # кафедра(ы)?
