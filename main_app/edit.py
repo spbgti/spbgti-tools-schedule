@@ -25,7 +25,7 @@ def get_init(instance):
         initial['name'] = instance.name
         initial['types'] = instance.type
         initial['room'] = instance.room.name
-        initial['teachers'] = ', '.join(teacher.name for teacher in instance.teacher.all())
+        initial['teachers'] = ', '.join(teacher.name for teacher in instance.teachers.all())
     return initial
 
 
@@ -72,7 +72,7 @@ class MyView(View):
                         exercise.room = Room.objects.get_or_create(name=room)[0]
                         exercise.type = types
                         exercise.save()
-                        exercise.teacher.add(*self.get_teachers(teachers))
+                        exercise.teachers.add(*self.get_teachers(teachers))
                         exercise.save()
         else:
             return render(request, 'schedule.html', {'formset': formset})
