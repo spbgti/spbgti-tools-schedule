@@ -79,7 +79,7 @@ class MyView(View):
         return self.get(request, group_number)
 
     def get(self, request, group_number):
-        schedule = Schedule.objects.get(semester='1', year='2017',
+        schedule = Schedule.objects.get(semester='1', year='2020',
                                         group=Group.objects.get(number=group_number))
         raw_exercises = Exercise.objects.filter(Q(schedule=schedule), (Q(parity=None) | Q(parity=1)))
         exercises = []
